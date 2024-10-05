@@ -1963,7 +1963,7 @@ s.Un()
 return s},
 atW(a){return new A.WH($.ai,a)},
 agb(){var s,r,q,p,o,n=A.atE(self.window.navigator)
-if(n==null||n.length===0)return B.lZ
+if(n==null||n.length===0)return B.m_
 s=A.a([],t.ss)
 for(r=n.length,q=0;q<n.length;n.length===r||(0,A.F)(n),++q){p=n[q]
 o=J.as1(p,"-")
@@ -7878,7 +7878,7 @@ ahI(a,b,c){var s,r,q
 if(b===c)return""
 if(!A.ann(a.charCodeAt(b)))A.rF(a,b,"Scheme not starting with alphabetic character")
 for(s=b,r=!1;s<c;++s){q=a.charCodeAt(s)
-if(!(q<128&&(B.lY[q>>>4]&1<<(q&15))!==0))A.rF(a,s,"Illegal scheme character")
+if(!(q<128&&(B.lZ[q>>>4]&1<<(q&15))!==0))A.rF(a,s,"Illegal scheme character")
 if(65<=q&&q<=90)r=!0}a=B.d.ae(a,b,c)
 return A.ayS(r?a.toLowerCase():a)},
 ayS(a){if(a==="http")return"http"
@@ -7890,7 +7890,7 @@ anr(a,b,c){if(a==null)return""
 return A.Bk(a,b,c,B.Dm,!1,!1)},
 anq(a,b,c,d,e,f){var s,r=e==="file",q=r||f
 if(a==null)return r?"/":""
-else s=A.Bk(a,b,c,B.m0,!0,!0)
+else s=A.Bk(a,b,c,B.m1,!0,!0)
 if(s.length===0){if(r)return"/"}else if(q&&!B.d.bi(s,"/"))s="/"+s
 return A.ayZ(s,e,f)},
 ayZ(a,b,c){var s=b.length===0
@@ -7981,7 +7981,7 @@ return B.b.bI(s,"/")},
 anm(a){var s,r,q=a.length
 if(q>=2&&A.ann(a.charCodeAt(0)))for(s=1;s<q;++s){r=a.charCodeAt(s)
 if(r===58)return B.d.ae(a,0,s)+"%3A"+B.d.cq(a,s+1)
-if(r>127||(B.lY[r>>>4]&1<<(r&15))===0)break}return a},
+if(r>127||(B.lZ[r>>>4]&1<<(r&15))===0)break}return a},
 az0(a,b){if(a.a8x("package")&&a.c==null)return A.aoi(b,0,b.length)
 return-1},
 ayV(){return A.a([],t.s)},
@@ -39173,7 +39173,7 @@ r=B.d.nn(m,"?",s)
 q=m.length
 if(r>=0){p=A.Bk(m,r+1,q,B.eU,!1,!1)
 q=r}else p=n
-m=o.c=new A.Ll("data","",n,n,A.Bk(m,s,q,B.m0,!1,!1),p,n)}return m},
+m=o.c=new A.Ll("data","",n,n,A.Bk(m,s,q,B.m1,!1,!1),p,n)}return m},
 i(a){var s=this.a
 return this.b[0]===-1?"data:"+s:s}}
 A.adF.prototype={
@@ -41719,13 +41719,13 @@ s=$.bl
 r=new A.eI(B.lW,t.tm)
 return A.bZ(q,A.dC(A.a([B.lj,B.lm,o,A.K3(B.eb,r.gd5(r).d6(0,new A.UZ(),t.a7).cL(0),B.xL,s*10*0.77+10,0)],t.p),B.ar,B.t,B.w),q,q,q,q,p,q)}}
 A.UZ.prototype={
-$1(a){var s=null,r=a.a,q=B.m_[r]
+$1(a){var s=null,r=a.a,q=B.m0[r]
 return new A.o3(A.a1w(s,B.lU[r],s,a.b,s,q),s)},
 $S:421}
 A.Dr.prototype={
 H(a){return A.dC(A.a([B.lj,B.lm,A.afK(new A.V_(),3,A.afJ(!0,B.bo,B.aU,B.hO,!1,!0,$.bl*90*0.77+90,0.8))],t.p),B.ar,B.t,B.w)}}
 A.V_.prototype={
-$3(a,b,c){var s=null,r=B.lW[c],q=B.m_[c]
+$3(a,b,c){var s=null,r=B.lW[c],q=B.m0[c]
 return new A.bU(B.lx,A.a1w(s,B.lU[c],s,r,s,q),s)},
 $S:64}
 A.F6.prototype={
@@ -41946,7 +41946,7 @@ r.toString
 q=$.bl
 return A.bZ(p,A.dC(A.a([B.lh,B.lk,s,r,A.c6(A.GG(A.bp("See More",$.tk,p),new A.abi()),q*14*0.77+14,q*50*0.77+50)],t.p),B.ar,B.t,B.w),p,p,p,p,o,p)}}
 A.abh.prototype={
-$1(a){var s=a.a,r=B.md[s],q=B.m1[s],p=B.me[s]
+$1(a){var s=a.a,r=B.md[s],q=B.lX[s],p=B.me[s]
 return A.a1w(a.b,B.m2[s],r,null,q,p)},
 $S:151}
 A.abi.prototype={
@@ -41958,7 +41958,7 @@ q.toString
 s=$.bl
 return A.dC(A.a([B.lh,B.lk,r,q,A.c6(A.GG(A.bp("See More",$.tk,null),new A.a1l()),s*14*0.77+14,s*50*0.77+50)],t.p),B.ar,B.t,B.w)}}
 A.a1k.prototype={
-$3(a,b,c){var s=B.md[c],r=B.m1[c],q=B.me[c]
+$3(a,b,c){var s=B.md[c],r=B.lX[c],q=B.me[c]
 return new A.bU(B.BY,A.a1w(null,B.m2[c],s,null,r,q),null)},
 $S:64}
 A.a1l.prototype={
@@ -41980,7 +41980,7 @@ q=new A.eI(B.ic,t.ly)
 return A.bZ(p,A.dC(A.a([B.li,B.ll,r,A.K3(B.eb,q.gd5(q).d6(0,new A.a4m(),t.hc).cL(0),B.jJ,n.a.b*0.05,o.a.a*0.05)],t.p),B.ar,B.t,B.w),p,p,p,p,new A.aQ(s,0,s,0),p)}}
 A.a4m.prototype={
 $1(a){var s=a.a
-return new A.k3(B.ic[s],B.lX[s],B.m5[s],null)},
+return new A.k3(B.ic[s],B.lY[s],B.m5[s],null)},
 $S:152}
 A.IF.prototype={
 H(a){var s=t.w,r=A.b1(a,null,s).w
@@ -41989,7 +41989,7 @@ s=$.e2
 s.toString
 return A.dC(A.a([B.li,B.ll,s,A.afK(new A.a4n(),5,A.afJ(!0,B.bo,B.aU,B.hO,!1,!0,r.a.b*0.4,0.65))],t.p),B.ar,B.t,B.w)}}
 A.a4n.prototype={
-$3(a,b,c){return new A.bU(B.lx,new A.k3(B.ic[c],B.lX[c],B.m5[c],null),null)},
+$3(a,b,c){return new A.bU(B.lx,new A.k3(B.ic[c],B.lY[c],B.m5[c],null),null)},
 $S:64}
 A.k3.prototype={
 aj(){return new A.Pz(new A.by(null,t.Fa),B.k)}}
@@ -45073,7 +45073,7 @@ r=n.r
 n=n.cx
 q=p.ga_a()
 p.a.toString
-return new A.yx(o,o,o,new A.aae(),o,o,o,o,o,o,m,o,o,r,B.EN,p.ga_i(),n,o,B.NF,s,o,q,o,o,B.lZ,!1,!1,!1,!1,p.gZV(),!1,o,o,o,new A.mI(p,t.bT))},
+return new A.yx(o,o,o,new A.aae(),o,o,o,o,o,o,m,o,o,r,B.EN,p.ga_i(),n,o,B.NF,s,o,q,o,o,B.m_,!1,!1,!1,!1,p.gZV(),!1,o,o,o,new A.mI(p,t.bT))},
 H(a){var s,r=null,q=A.uQ(!1,!1,this.Vo(a),r,r,r,r,!0,r,r,r,new A.aaf(),r,r)
 this.a.toString
 s=this.d
@@ -76048,6 +76048,7 @@ B.lW=A.a(s([B.lJ,B.CB,B.Cy]),t.G1)
 B.jP=new A.Au(0,"named")
 B.y0=new A.Au(1,"anonymous")
 B.E3=A.a(s([B.jP,B.y0]),A.an("v<Au>"))
+B.lX=A.a(s(["https://github.com/Anwar-Kabir/agni-kanya","https://play.google.com/store/apps/details?id=com.app.quarkvpn","https://github.com/Anwar-Kabir/takesell-api","https://github.com/Anwar-Kabir/Finance-Management","https://github.com/Anwar-Kabir/Fitness-Tracking-App"]),t.s)
 B.CA=new A.cD(58513,"MaterialIcons",null)
 B.CF=new A.cD(59122,"MaterialIcons",null)
 B.Cv=new A.cD(57622,"MaterialIcons",null)
@@ -76061,8 +76062,8 @@ B.yH=new A.ct(0,B.aJ,B.Bi,B.rv,8)
 B.An=new A.x(251658240)
 B.yI=new A.ct(0,B.aJ,B.An,B.rv,1)
 B.E9=A.a(s([B.yH,B.yI]),t.sq)
-B.lX=A.a(s(["Mobile App Development","Laravel Backend API","UI/UX Designing Figma, Canva","Rapid Prototyping","Open Source - GitHub"]),t.s)
-B.lY=A.a(s([0,0,26624,1023,65534,2047,65534,2047]),t.t)
+B.lY=A.a(s(["Mobile App Development","Laravel Backend API","UI/UX Designing Figma, Canva","Rapid Prototyping","Open Source - GitHub"]),t.s)
+B.lZ=A.a(s([0,0,26624,1023,65534,2047,65534,2047]),t.t)
 B.ds=A.a(s([B.cm,B.bK,B.ee,B.ef,B.h_]),t.QP)
 B.aS=new A.hN(0,"leading")
 B.aF=new A.hN(1,"title")
@@ -76084,10 +76085,9 @@ B.CO=new A.jk(B.DV,"image/bmp")
 B.Eh=A.a(s([B.CN,B.CR,B.CS,B.CQ,B.CP,B.CO]),A.an("v<jk>"))
 B.ic=A.a(s(["assets/services/app.png","assets/services/ui.png","assets/services/rapid.png","assets/services/blog.png","assets/services/open.png"]),t.s)
 B.F4=new A.kQ("en","US")
-B.lZ=A.a(s([B.F4]),t.ss)
-B.m_=A.a(s(["Location","Phone","Email"]),t.s)
-B.m0=A.a(s([0,0,65490,12287,65535,34815,65534,18431]),t.t)
-B.m1=A.a(s(["https://github.com/Anwar-Kabir/agni-kanya","https://play.google.com/store/apps/developer?id=YamanTech+Solutions","https://github.com/Anwar-Kabir/takesell-api","https://github.com/Anwar-Kabir/Finance-Management","https://github.com/Anwar-Kabir/Fitness-Tracking-App"]),t.s)
+B.m_=A.a(s([B.F4]),t.ss)
+B.m0=A.a(s(["Location","Phone","Email"]),t.s)
+B.m1=A.a(s([0,0,65490,12287,65535,34815,65534,18431]),t.t)
 B.Ei=A.a(s(["pointerdown","pointermove","pointerleave","pointerup","pointercancel","touchstart","touchend","touchmove","touchcancel","mousedown","mousemove","mouseleave","mouseup","keyup","keydown"]),t.s)
 B.Ej=A.a(s(["assets/projects/snackbar.png","assets/projects/quranB.png","assets/projects/medkitB.png","assets/projects/hereiamB.png","assets/projects/covidB.png"]),t.s)
 B.m2=A.a(s(["Woman Safty Apps. user can call, message, with her family, friends and local police station by clicking SOS service. Auto user location will share with need person.","Get yourself an ultra-fast VPN connection and never stop for anything.","Take sell e-commerce. easy to shopping. Flutter e-commerce.","Personal Finance Management App.","Flutter - Fitness App ."]),t.s)
